@@ -39,6 +39,7 @@ public class PrincipalForm extends javax.swing.JFrame {
         btnVenda = new javax.swing.JButton();
         btnRelatorio = new javax.swing.JButton();
         btnCliente = new javax.swing.JButton();
+        Fornecedor = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuCliente = new javax.swing.JMenu();
 
@@ -84,6 +85,13 @@ public class PrincipalForm extends javax.swing.JFrame {
             }
         });
 
+        Fornecedor.setText("Fornecedor");
+        Fornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FornecedorActionPerformed(evt);
+            }
+        });
+
         menuCliente.setText("Novo");
         menuCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +116,8 @@ public class PrincipalForm extends javax.swing.JFrame {
                 .addComponent(btnCliente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRelatorio)
+                .addGap(18, 18, 18)
+                .addComponent(Fornecedor)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -117,7 +127,8 @@ public class PrincipalForm extends javax.swing.JFrame {
                     .addComponent(btnProduto)
                     .addComponent(btnVenda)
                     .addComponent(btnRelatorio)
-                    .addComponent(btnCliente))
+                    .addComponent(btnCliente)
+                    .addComponent(Fornecedor))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jDesktopPane1)
                 .addContainerGap())
@@ -155,6 +166,13 @@ public class PrincipalForm extends javax.swing.JFrame {
         tela.setVisible(true);
     }//GEN-LAST:event_btnClienteActionPerformed
 
+    private void FornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FornecedorActionPerformed
+        // TODO add your handling code here:
+        FornecedorForm tela = new FornecedorForm();
+        jDesktopPane1.add(tela);
+        tela.setVisible(true);
+    }//GEN-LAST:event_FornecedorActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -191,6 +209,7 @@ public class PrincipalForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Fornecedor;
     private javax.swing.JButton btnCliente;
     private javax.swing.JButton btnProduto;
     private javax.swing.JButton btnRelatorio;
